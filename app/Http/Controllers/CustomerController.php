@@ -132,7 +132,7 @@ class CustomerController extends Controller
         try {
             $socialUser = Socialite::driver('google')->user();
             // Debugging untuk melihat data yang diterima dari Google
-            dd($socialUser);
+            // dd($socialUser);
             // Cek apakah email sudah terdaftar
             $registeredUser = User::where('email', $socialUser->email)->first();
 
